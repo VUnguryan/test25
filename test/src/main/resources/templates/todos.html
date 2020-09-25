@@ -1,0 +1,24 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Todos</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Date</th>
+				<th>is done</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="todo : ${todos}">
+				<td th:text="${todo.name}"></td>
+				<td th:text="${todo.plannedFor}"></td>
+				<td th:text="${todo.done}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
